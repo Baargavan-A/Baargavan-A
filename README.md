@@ -249,5 +249,5 @@ Information Technology student focused on software development with a strong fou
 ---
 
 <div align="center">
-  <p><b>BAARGAVAN ANANDHA</b></p>
+  <p><b>BAARGAVAN A</b></p>
 </div>
