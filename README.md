@@ -10,7 +10,7 @@
 <br/>
 
 <p align="center">
-  <a href="https://github.com/Baargavan-Anandhakumar">
+  <a href="https://github.com/Baargavan-A">
     <img src="https://img.shields.io/badge/GitHub-0D1117?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
   &nbsp;&nbsp;
@@ -102,8 +102,8 @@ Information Technology student focused on software development with a strong fou
   <summary><b>Expiry Date Manager — 2026</b></summary>
   <br/>
   A full-stack application designed to manage expiry dates, track items, and provide timely visibility into upcoming expirations. <br/><br/>
-  <b>Client:</b> <a href="https://github.com/Baargavan-Anandhakumar/expiry-date-manager-react-client">expiry-date-manager-react-client</a> <br/>
-  <b>Server:</b> <a href="https://github.com/Baargavan-Anandhakumar/expiry-date-manager-server">expiry-date-manager-server</a> <br/>
+  <b>Client:</b> <a href="https://github.com/Baargavan-A/expiry-date-manager-react-client">expiry-date-manager-react-client</a> <br/>
+  <b>Server:</b> <a href="https://github.com/Baargavan-A/expiry-date-manager-server">expiry-date-manager-server</a> <br/>
   <b>Technologies:</b> `React` `Vite` `Node.js` `Express` `MongoDB` `JWT` `Swagger`
 </details>
 
@@ -230,7 +230,7 @@ Information Technology student focused on software development with a strong fou
 ### ✦ CONNECT
 
 <div align="center">
-  <a href="https://github.com/Baargavan-Anandhakumar">
+  <a href="https://github.com/Baargavan-A">
     <img src="https://img.shields.io/badge/GitHub-0D1117?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
   &nbsp;&nbsp;
@@ -249,5 +249,5 @@ Information Technology student focused on software development with a strong fou
 ---
 
 <div align="center">
-  <p><b>BAARGAVAN ANANDHAKUMAR</b></p>
+  <p><b>BAARGAVAN ANANDHA</b></p>
 </div>
