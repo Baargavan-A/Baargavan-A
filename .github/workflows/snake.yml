@@ -1,9 +1,8 @@
-```yaml
 name: Generate Contribution Snake
 
-on:
+'on':
   schedule:
-    - cron: "0 0 * * *"
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 permissions:
@@ -49,4 +48,3 @@ jobs:
           else
             echo "Snake SVGs are already up to date."
           fi
-```
