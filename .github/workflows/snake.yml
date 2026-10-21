@@ -1,3 +1,4 @@
+```yaml
 name: Generate Contribution Snake
 
 on:
@@ -7,6 +8,10 @@ on:
 
 permissions:
   contents: write
+
+concurrency:
+  group: contribution-snake
+  cancel-in-progress: true
 
 jobs:
   generate:
@@ -20,30 +25,28 @@ jobs:
       - name: Generate contribution grid snake
         uses: Platane/snk@v3
         with:
-          github_user_name: Baargavan-Anandhakumar
+          github_user_name: baargavan-a
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      - name: Copy SVGs to assets folder
+      - name: Copy generated SVGs
         run: |
           mkdir -p assets
-          rm -f assets/github-contribution-grid-snake.svg
-          rm -f assets/github-contribution-grid-snake-dark.svg
-          chmod -R u+rwX assets
-          if [ -f "dist/github-contribution-grid-snake.svg" ]; then
-            sed -i 's/<\/svg>/<style>.u { display: none !important; }<\/style><\/svg>/g' dist/github-contribution-grid-snake.svg
-            cp dist/github-contribution-grid-snake.svg assets/github-contribution-grid-snake.svg
-          fi
-          if [ -f "dist/github-contribution-grid-snake-dark.svg" ]; then
-            sed -i 's/<\/svg>/<style>.u { display: none !important; }<\/style><\/svg>/g' dist/github-contribution-grid-snake-dark.svg
-            cp dist/github-contribution-grid-snake-dark.svg assets/github-contribution-grid-snake-dark.svg
-          fi
+          test -s dist/github-contribution-grid-snake.svg
+          test -s dist/github-contribution-grid-snake-dark.svg
+          install -m 644 dist/github-contribution-grid-snake.svg assets/github-contribution-grid-snake.svg
+          install -m 644 dist/github-contribution-grid-snake-dark.svg assets/github-contribution-grid-snake-dark.svg
 
-      - name: Commit and push the generated SVGs
+      - name: Commit and push generated SVGs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/github-contribution-grid-snake.svg assets/github-contribution-grid-snake-dark.svg
-          git diff --cached --quiet || git commit -m "chore: update contribution snake"
-          git push
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update contribution snake"
+            git push
+          else
+            echo "Snake SVGs are already up to date."
+          fi
+```
